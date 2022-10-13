@@ -1,0 +1,89 @@
+.reviews {
+    padding: 100px 0;
+    background-image: url('../../images/backgrounds/reviewsbg.png');
+    background-size: 100% 100%;
+}
+
+.reviews__content {
+    margin: 0 auto;
+    width: 48.1%;
+    min-width: 500px;
+    background-color: rgba(0, 0, 0, 0.67);
+    padding: 82px 0 103px 0;
+
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.76);
+    }
+}
+
+.reviews__heading {
+    font-family: 'Yeseva One';
+    font-weight: normal;
+    font-size: 2.25rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+
+.reviews__divider {
+    width: 247px;
+    height: 24px;
+    background-image: url('../../images/divider3.png');
+    margin-bottom: 30px;
+}
+
+.review {
+    width: 80.7%;
+    margin: 0 auto;
+    font-family: 'Gentium Book Basic';
+    font-weight: bold;
+    color: white;
+    font-size: 1.49rem;
+    text-align: center;
+    line-height: 2.8rem;
+
+    &::before {
+        content: '“';
+        font-family: 'Georgia';
+        opacity: 0.5;
+        font-size: 5.4rem;
+        color: #f2f4f4;
+    }
+
+    &::after {
+        display: block;
+        content: '”';
+        position: relative;
+        left: 17vw;
+        top: 2.3vh;
+        font-family: 'Georgia';
+        opacity: 0.5;
+        font-size: 5.4rem;
+        color: #f2f4f4;
+    }
+}
+
+.review-author {
+    display: block;
+    font-family: 'Lato';
+    font-weight: normal;
+    font-size: 1.1rem;
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 500px) {
+    .reviews__content {
+        min-width: 310px;
+    }
+
+    .review {
+        font-size: 1.2rem;
+    }
+
+    .review-author {
+        font-size: 0.95rem;
+    }
+}

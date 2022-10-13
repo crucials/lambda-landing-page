@@ -1,0 +1,218 @@
+.header {
+    background-image: url('../../images/backgrounds/herobg.png');
+    background-size: 100% 100%;
+}
+
+
+// Navigation bar
+.header__nav-bar {
+    display: flex;
+    justify-content: center;
+    min-height: 100px;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.header__nav-bar_sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    min-height: 70px;
+    padding: 3px 0;
+    background-color: #191919;
+    transform: translateY(-100%);
+
+    animation-name: nav-bar-appearing;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+
+    @keyframes nav-bar-appearing {
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    & .header__logo {
+        width: 120px;
+        height: 70px;
+    }
+}
+
+.header__show-menu-button {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    background-color: #dab33e;
+    padding: 5px 20px;
+    border: none;
+    display: none;
+    z-index: 30;
+    transform-origin: center;
+
+    transition: transform 0.5s;
+}
+
+.header__show-menu-button_visible {
+    display: block;
+}
+
+.header__logo {
+    width: 156px;
+    height: 92px;
+    margin-right: 200px;
+}
+
+.header__nav-menu {
+    display: flex;
+    align-items: center;
+    column-gap: 35px;
+    margin-right: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 15px;
+    padding-inline-start: 0px;
+}
+
+.header__hover-indicator {
+    position: absolute;
+    top: -100%;
+    width: 5rem;
+    height: 0.18rem;
+    background-color: white;
+    opacity: 0.7;
+
+    transition: left 0.4s, top 0.25s;
+}
+
+.header__hover-indicator_visible {
+    top: 0;
+}
+
+.menu-link {
+    font-family: 'Gentium Book Basic';
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 1.31rem;
+}
+
+.header__social-networks {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.social-network {
+    width: 21px;
+    height: 21px;
+
+    transition: scale 0.34;
+
+    &:hover {
+        scale: 1.1;
+    }
+}
+
+@media (max-width: 1160px) {
+    .header__nav-bar {
+        column-gap: 20px;
+        padding: 20px 10px;
+    }
+
+    .header__logo {
+        margin-right: 0px;
+    }
+
+    .header__nav-menu {
+        margin-right: 0px;
+    }
+}
+
+
+// Hero section
+.hero {
+    padding: 139px 0;
+}
+
+.hero__heading {
+    font-family: 'Yeseva One';
+    color: white;
+    font-size: 5.6rem;
+    text-align: center;
+    padding: 0 200px;
+    margin-bottom: 34px;
+
+    &:hover {
+        cursor: default;
+    }
+}
+
+.hero__divider {
+    width: 232px;
+    height: 43px;
+    background-image: url('../../images/divider.png');
+
+    margin-bottom: 34px;
+}
+
+.hero__buttons-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-section-button {
+    padding: 21px 52px;
+    font-family: 'Lato';
+    font-weight: normal;
+    border-width: 1px;
+    flex-shrink: 0;
+
+    transition: background 0.3s, border-color 0.35s, scale 0.2s;
+
+    &:hover {
+        background-color: #dab33e;
+        border-color: #dab33e;
+        color: white;
+        cursor: pointer;
+    }
+
+    &:active {
+        scale: 1.03
+    }
+}
+
+.hero__book-button {
+    background-color: #000000cc;
+    border-color: black;
+    color: white;
+}
+
+.hero__view-menu-button {
+    background-color: #ffffffa7;
+    border-color: white;
+    color: white;
+}
+
+@media (max-width: 1000px) {
+    .hero__heading {
+        font-size: 50px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        background-size: 200% 200%;
+        background-position: center;
+    }
+}

@@ -1,0 +1,131 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    column-gap: 150px;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    padding: 65px 15px;
+    background-color: #191919;
+}
+
+.footer-section-heading {
+    font-family: 'Yeseva One';
+    font-size: 1.3rem;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+}
+
+.footer-section-divider {
+    width: 199px;
+    height: 19px;
+    background-image: url('../../images/divider3.png');
+    margin-bottom: 23px;
+}
+
+
+// About
+.footer-about {
+    width: 23%;
+    min-width: 300px;
+}
+
+.footer-about__heading {
+    margin-bottom: 1.3rem;
+}
+
+.footer-about__text {
+    font-family: 'Open Sans';
+    font-weight: normal;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    line-height: 1.5rem;
+    width: 100%;
+}
+
+.footer-about__highlighted-text {
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+}
+
+
+// Schedule
+.schedule {
+    width: 14.37%;
+    min-width: 195px;
+}
+
+.schedule__heading {
+    margin-bottom: 1.06rem;
+}
+
+.schedule__working-hours {
+    font-family: 'Open Sans';
+    font-weight: normal;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.schedule__days {
+    font-weight: bold;
+}
+
+.schedule__long-working-days-hours {
+    margin-bottom: 53px;
+}
+
+.schedule__payment-methods {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.payment-method {
+    width: 22px;
+    height: 15px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+// Location
+.location {
+    width: 13%;
+    min-width: 200px;
+}
+
+.location__heading {
+    margin-bottom: 1.31rem;
+}
+
+.address {
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+.location__second-address {
+    margin-bottom: 56px;
+}
+
+.location__links {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.footer-link {
+    width: 19px;
+    height: 17px;
+}
