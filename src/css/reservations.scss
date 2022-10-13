@@ -1,0 +1,146 @@
+.reservations {
+    padding: 100px 10px;
+    display: flex;
+    row-gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 107px;
+    background-image: url('../../images/backgrounds/aboutbg.png');
+    background-size: 100% 100%;
+}
+
+
+.reservations__pictures {
+    margin: 0;
+    width: 35.62%;
+    min-width: 220px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.reservations__picture {
+    width: 47.36%;
+    min-width: 100px;
+}
+
+
+.reservations__content {
+    width: 26.43%;
+    min-width: 300px;
+}
+
+.reservations__heading {
+    font-family: 'Yeseva One';
+    font-size: 2.25rem;
+    font-weight: normal;
+    color: #cc9900;
+    text-align: center;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    margin-bottom: 15px;
+}
+
+.reservations__divider {
+    width: 247px;
+    height: 24px;
+    background-image: url('../../images/divider2.png');
+    margin-bottom: 32px;
+}
+
+.reservations__text {
+    text-align: center;
+    padding: 0 5px;
+    font-family: 'Lato';
+    font-weight: normal;
+    font-size: 1rem;
+    color: #4c4c4c;
+    margin-bottom: 46px;
+}
+
+.reservations__book-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 29px;
+    margin-bottom: 33px;
+}
+
+.book-field-label {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 200px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 0.87rem;
+    color: #c9a131;
+}
+
+.book-field {
+    display: block;
+    padding: 0 14px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #c8c6c6;
+    font-family: 'Open Sans';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+
+    &:focus {
+        outline: none;
+        border-color: #c89f2d;
+    }
+
+    &::placeholder {
+        font-style: italic;
+        color: #7c7c7c;
+    }
+}
+
+.book-field-label__date-field::-webkit-calendar-picker-indicator {
+    content: url('../../images/icons/calendar.png');
+    width: 0.81rem;
+    height: 0.81rem;
+}
+
+.reservations__book-button {
+    display: block;
+    padding: 10px 60px;
+    margin: 0 auto;
+    font-family: 'Open Sans';
+    font-weight: normal;
+    font-style: normal;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    background-color: #c89f2d;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #e0b746;
+    }
+}
+
+@media (max-width: 1550px) {
+    .reservations__book-form {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1010px) {
+    .reservations {
+        padding: 100px 0;
+        column-gap: 0px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .reservations__pictures {
+        align-self: center;
+        
+    }
+}

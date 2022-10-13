@@ -1,0 +1,1076 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+.header {
+  background-image: url("../../images/backgrounds/herobg.png");
+  background-size: 100% 100%;
+}
+
+.header__nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.header__nav-bar_sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  min-height: 70px;
+  padding: 3px 0;
+  background-color: #191919;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-animation-name: nav-bar-appearing;
+          animation-name: nav-bar-appearing;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes nav-bar-appearing {
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes nav-bar-appearing {
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.header__nav-bar_sticky .header__logo {
+  width: 120px;
+  height: 70px;
+}
+
+.header__show-menu-button {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  background-color: #dab33e;
+  padding: 5px 20px;
+  border: none;
+  display: none;
+  z-index: 30;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.header__show-menu-button_visible {
+  display: block;
+}
+
+.header__logo {
+  width: 156px;
+  height: 92px;
+  margin-right: 200px;
+}
+
+.header__nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 35px;
+     -moz-column-gap: 35px;
+          column-gap: 35px;
+  margin-right: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 15px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+}
+
+.header__hover-indicator {
+  position: absolute;
+  top: -100%;
+  width: 5rem;
+  height: 0.18rem;
+  background-color: white;
+  opacity: 0.7;
+  -webkit-transition: left 0.4s, top 0.25s;
+  transition: left 0.4s, top 0.25s;
+}
+
+.header__hover-indicator_visible {
+  top: 0;
+}
+
+.menu-link {
+  font-family: "Gentium Book Basic";
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-size: 1.31rem;
+}
+
+.header__social-networks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-network {
+  width: 21px;
+  height: 21px;
+  -webkit-transition: scale 0.34;
+  transition: scale 0.34;
+}
+.social-network:hover {
+  scale: 1.1;
+}
+
+@media (max-width: 1160px) {
+  .header__nav-bar {
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+    padding: 20px 10px;
+  }
+
+  .header__logo {
+    margin-right: 0px;
+  }
+
+  .header__nav-menu {
+    margin-right: 0px;
+  }
+}
+.hero {
+  padding: 139px 0;
+}
+
+.hero__heading {
+  font-family: "Yeseva One";
+  color: white;
+  font-size: 5.6rem;
+  text-align: center;
+  padding: 0 200px;
+  margin-bottom: 34px;
+}
+.hero__heading:hover {
+  cursor: default;
+}
+
+.hero__divider {
+  width: 232px;
+  height: 43px;
+  background-image: url("../../images/divider.png");
+  margin-bottom: 34px;
+}
+
+.hero__buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.hero-section-button {
+  padding: 21px 52px;
+  font-family: "Lato";
+  font-weight: normal;
+  border-width: 1px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-transition: background 0.3s, border-color 0.35s, scale 0.2s;
+  transition: background 0.3s, border-color 0.35s, scale 0.2s;
+}
+.hero-section-button:hover {
+  background-color: #dab33e;
+  border-color: #dab33e;
+  color: white;
+  cursor: pointer;
+}
+.hero-section-button:active {
+  scale: 1.03;
+}
+
+.hero__book-button {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-color: black;
+  color: white;
+}
+
+.hero__view-menu-button {
+  background-color: rgba(255, 255, 255, 0.6549019608);
+  border-color: white;
+  color: white;
+}
+
+@media (max-width: 1000px) {
+  .hero__heading {
+    font-size: 50px;
+    padding: 0 10px;
+  }
+}
+@media (max-width: 700px) {
+  .header {
+    background-size: 200% 200%;
+    background-position: center;
+  }
+}
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 36px;
+     -moz-column-gap: 36px;
+          column-gap: 36px;
+  row-gap: 40px;
+  padding: 50px 0 30px 0;
+  background-image: url("../../images/backgrounds/aboutbg.png");
+  background-size: 100% 100%;
+}
+
+.about__content {
+  padding-top: 51px;
+  min-width: 300px;
+  width: 25.56%;
+}
+
+.about__heading {
+  font-family: "Yeseva One";
+  font-size: 2.25rem;
+  line-height: 2.3rem;
+  color: #cc9900;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about__divider {
+  width: 247px;
+  height: 24px;
+  background-image: url("../../images/divider2.png");
+  margin-bottom: 32px;
+}
+
+.about__text {
+  font-family: "Lato";
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #4c4c4c;
+  margin-bottom: 52px;
+}
+
+.about__cook-pic {
+  display: block;
+  width: 219px;
+  height: 221px;
+  margin-left: max(9vw, 100px);
+}
+
+@media (max-width: 400px) {
+  .about__cook-pic {
+    margin: 0 auto;
+  }
+}
+.about__dish-photo {
+  width: 38%;
+  min-width: 300px;
+  min-height: 300px;
+  height: 38.81vw;
+}
+
+.ingredients {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 100px 215px;
+  background-image: url("../../images/backgrounds/ingredientsbg.png");
+  background-size: 100% 100%;
+}
+
+.ingredients__content {
+  width: 32.7%;
+  min-width: 290px;
+  padding: 70px 80px;
+  background-color: rgba(0, 0, 0, 0.67);
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.ingredients__content:hover {
+  background-color: rgba(0, 0, 0, 0.76);
+}
+
+.ingredients__heading {
+  font-family: "Yeseva One";
+  font-weight: normal;
+  font-size: 2.25rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.ingredients__divider {
+  width: 247px;
+  height: 24px;
+  background-image: url("../../images/divider3.png");
+  margin-bottom: 30px;
+}
+
+.ingredients__text {
+  font-family: "Lato";
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 0 5px;
+  margin-bottom: 76px;
+}
+
+.ingredients__ingredients-photos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+}
+
+.ingredient-photo {
+  width: 6.25vw;
+  height: 6.25vw;
+  min-width: 95px;
+  min-height: 95px;
+}
+
+@media (max-width: 1150px) {
+  .ingredients {
+    padding: 100px 20px;
+  }
+}
+@media (max-width: 550px) {
+  .ingredients {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 100px 0px;
+  }
+
+  .ingredients__content {
+    padding: 35px 10px;
+  }
+
+  .ingredients__ingredients-photos {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 107px 0 98px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 130px;
+     -moz-column-gap: 130px;
+          column-gap: 130px;
+  background-image: url("../../images/backgrounds/menubg.png");
+  background-size: 100% 100%;
+}
+
+.menu-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 70px;
+  width: 26.94%;
+  min-width: 260px;
+}
+
+.menu-section {
+  width: 100%;
+}
+
+.menu-section-title {
+  font-family: "Yeseva One";
+  color: #cc9900;
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.menu-divider {
+  width: 247px;
+  height: 24px;
+  background-image: url("../../images/divider2.png");
+  margin-bottom: 30px;
+}
+
+.dishes-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 37px;
+}
+
+.dish {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+}
+
+.special-dish {
+  border: 1px solid #c89f2d;
+}
+
+.special-marker {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  font-family: "Lato";
+  font-weight: normal;
+  font-size: 0.87rem;
+  padding: 4px 13px;
+  color: #f8fafa;
+  background-color: #d6b865;
+}
+
+.dish-title, .dish-price {
+  font-family: "Yeseva One";
+  font-weight: normal;
+  color: #c89f2d;
+  font-size: 1.31rem;
+}
+
+.dish-decoration-line {
+  width: 100%;
+  height: 1px;
+  background-color: #fbf7c0;
+}
+
+.dish-description {
+  font-family: "Lato";
+  font-weight: normal;
+  font-size: 1rem;
+  color: #4c4c4c;
+}
+
+.menu__intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 10;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.menu__intro_hiding {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.menu__intro_hidden {
+  display: none;
+}
+
+.menu__heading {
+  font-family: "Yeseva One";
+  font-weight: normal;
+  font-size: 7.8rem;
+  color: white;
+  margin: 0;
+  opacity: 0;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  -webkit-transition: opacity 0.8s, -webkit-transform 1s;
+  transition: opacity 0.8s, -webkit-transform 1s;
+  transition: transform 1s, opacity 0.8s;
+  transition: transform 1s, opacity 0.8s, -webkit-transform 1s;
+}
+
+.menu__heading_loaded {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.menu__icon {
+  display: block;
+  width: 7.8rem;
+  height: 7.8rem;
+  scale: 0;
+  -webkit-transition: scale 0.85s;
+  transition: scale 0.85s;
+}
+
+.menu__icon_loaded {
+  scale: 1;
+}
+
+.corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
+          clip-path: polygon(100% 0, 0 0, 100% 100%);
+  background-color: #dab33e;
+  height: 180px;
+  width: 180px;
+}
+
+@media (max-width: 700px) {
+  .menu__intro {
+    display: none;
+  }
+}
+.reviews {
+  padding: 100px 0;
+  background-image: url("../../images/backgrounds/reviewsbg.png");
+  background-size: 100% 100%;
+}
+
+.reviews__content {
+  margin: 0 auto;
+  width: 48.1%;
+  min-width: 500px;
+  background-color: rgba(0, 0, 0, 0.67);
+  padding: 82px 0 103px 0;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.reviews__content:hover {
+  background-color: rgba(0, 0, 0, 0.76);
+}
+
+.reviews__heading {
+  font-family: "Yeseva One";
+  font-weight: normal;
+  font-size: 2.25rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+.reviews__divider {
+  width: 247px;
+  height: 24px;
+  background-image: url("../../images/divider3.png");
+  margin-bottom: 30px;
+}
+
+.review {
+  width: 80.7%;
+  margin: 0 auto;
+  font-family: "Gentium Book Basic";
+  font-weight: bold;
+  color: white;
+  font-size: 1.49rem;
+  text-align: center;
+  line-height: 2.8rem;
+}
+.review::before {
+  content: "“";
+  font-family: "Georgia";
+  opacity: 0.5;
+  font-size: 5.4rem;
+  color: #f2f4f4;
+}
+.review::after {
+  display: block;
+  content: "”";
+  position: relative;
+  left: 17vw;
+  top: 2.3vh;
+  font-family: "Georgia";
+  opacity: 0.5;
+  font-size: 5.4rem;
+  color: #f2f4f4;
+}
+
+.review-author {
+  display: block;
+  font-family: "Lato";
+  font-weight: normal;
+  font-size: 1.1rem;
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 500px) {
+  .reviews__content {
+    min-width: 310px;
+  }
+
+  .review {
+    font-size: 1.2rem;
+  }
+
+  .review-author {
+    font-size: 0.95rem;
+  }
+}
+.reservations {
+  padding: 100px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  row-gap: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-column-gap: 107px;
+     -moz-column-gap: 107px;
+          column-gap: 107px;
+  background-image: url("../../images/backgrounds/aboutbg.png");
+  background-size: 100% 100%;
+}
+
+.reservations__pictures {
+  margin: 0;
+  width: 35.62%;
+  min-width: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.reservations__picture {
+  width: 47.36%;
+  min-width: 100px;
+}
+
+.reservations__content {
+  width: 26.43%;
+  min-width: 300px;
+}
+
+.reservations__heading {
+  font-family: "Yeseva One";
+  font-size: 2.25rem;
+  font-weight: normal;
+  color: #cc9900;
+  text-align: center;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  margin-bottom: 15px;
+}
+
+.reservations__divider {
+  width: 247px;
+  height: 24px;
+  background-image: url("../../images/divider2.png");
+  margin-bottom: 32px;
+}
+
+.reservations__text {
+  text-align: center;
+  padding: 0 5px;
+  font-family: "Lato";
+  font-weight: normal;
+  font-size: 1rem;
+  color: #4c4c4c;
+  margin-bottom: 46px;
+}
+
+.reservations__book-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 29px;
+  margin-bottom: 33px;
+}
+
+.book-field-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+  width: 200px;
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 0.87rem;
+  color: #c9a131;
+}
+
+.book-field {
+  display: block;
+  padding: 0 14px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #c8c6c6;
+  font-family: "Open Sans";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1rem;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+.book-field:focus {
+  outline: none;
+  border-color: #c89f2d;
+}
+.book-field::-webkit-input-placeholder {
+  font-style: italic;
+  color: #7c7c7c;
+}
+.book-field::-moz-placeholder {
+  font-style: italic;
+  color: #7c7c7c;
+}
+.book-field:-ms-input-placeholder {
+  font-style: italic;
+  color: #7c7c7c;
+}
+.book-field::-ms-input-placeholder {
+  font-style: italic;
+  color: #7c7c7c;
+}
+.book-field::placeholder {
+  font-style: italic;
+  color: #7c7c7c;
+}
+
+.book-field-label__date-field::-webkit-calendar-picker-indicator {
+  content: url("../../images/icons/calendar.png");
+  width: 0.81rem;
+  height: 0.81rem;
+}
+
+.reservations__book-button {
+  display: block;
+  padding: 10px 60px;
+  margin: 0 auto;
+  font-family: "Open Sans";
+  font-weight: normal;
+  font-style: normal;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  background-color: #c89f2d;
+}
+.reservations__book-button:hover {
+  cursor: pointer;
+  background-color: #e0b746;
+}
+
+@media (max-width: 1550px) {
+  .reservations__book-form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 1010px) {
+  .reservations {
+    padding: 100px 0;
+    -webkit-column-gap: 0px;
+       -moz-column-gap: 0px;
+            column-gap: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .reservations__pictures {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 150px;
+     -moz-column-gap: 150px;
+          column-gap: 150px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 40px;
+  padding: 65px 15px;
+  background-color: #191919;
+}
+
+.footer-section-heading {
+  font-family: "Yeseva One";
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+}
+
+.footer-section-divider {
+  width: 199px;
+  height: 19px;
+  background-image: url("../../images/divider3.png");
+  margin-bottom: 23px;
+}
+
+.footer-about {
+  width: 23%;
+  min-width: 300px;
+}
+
+.footer-about__heading {
+  margin-bottom: 1.3rem;
+}
+
+.footer-about__text {
+  font-family: "Open Sans";
+  font-weight: normal;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  line-height: 1.5rem;
+  width: 100%;
+}
+
+.footer-about__highlighted-text {
+  font-weight: bold;
+  background-color: transparent;
+  color: white;
+}
+
+.schedule {
+  width: 14.37%;
+  min-width: 195px;
+}
+
+.schedule__heading {
+  margin-bottom: 1.06rem;
+}
+
+.schedule__working-hours {
+  font-family: "Open Sans";
+  font-weight: normal;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.schedule__days {
+  font-weight: bold;
+}
+
+.schedule__long-working-days-hours {
+  margin-bottom: 53px;
+}
+
+.schedule__payment-methods {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.payment-method {
+  width: 22px;
+  height: 15px;
+}
+.payment-method:hover {
+  cursor: pointer;
+}
+
+.location {
+  width: 13%;
+  min-width: 200px;
+}
+
+.location__heading {
+  margin-bottom: 1.31rem;
+}
+
+.address {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+.location__second-address {
+  margin-bottom: 56px;
+}
+
+.location__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.footer-link {
+  width: 19px;
+  height: 17px;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../../fonts/Georgia.woff");
+}
+body {
+  overflow-x: hidden;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+p {
+  -webkit-margin-before: 0px;
+          margin-block-start: 0px;
+  -webkit-margin-after: 0px;
+          margin-block-end: 0px;
+}
+
+.adaptive-image {
+  width: 100%;
+  height: 100%;
+}
+
+.divider {
+  border: none;
+  background-size: 100% 100%;
+}
