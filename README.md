@@ -4,6 +4,8 @@
 
 [View the page :eyes:](https://crucials.github.io/lambda-landing-page)
 
+[View the photoshop mockup :bookmark_tabs:](https://drive.google.com/file/d/1uVxoJVYdRnhXmwn9RZhPqNHxT3BoyR9B/view?usp=sharing) *(too large to upload it to the repo)*
+
 ## Screenshots
 
 ![Web page picture](https://github.com/crucials/lambda-landing-page/blob/main/screenshots/screenshot1.png)
